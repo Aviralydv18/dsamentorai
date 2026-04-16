@@ -37,6 +37,19 @@ export const ChatPanel = ({
     setInput("");
   };
 
+  const requestHint = (level: 1 | 2 | 3 | 4) => {
+    if (isStreaming) return;
+    const prompts: Record<number, string> = {
+      1: "Give me a Level 1 hint — just a tiny nudge to point me in the right direction. Don't reveal the approach yet.",
+      2: "Give me a Level 2 hint — describe the high-level approach or pattern to use, without pseudocode or code.",
+      3: "Give me a Level 3 hint — walk me through the pseudocode / step-by-step logic, but no full code yet.",
+      4: "Give me a Level 4 hint — the full solution with code, complexity analysis, and explanation.",
+    };
+    onSend(prompts[level]);
+  };
+
+  const hasMessages = messages.length > 0;
+
   return (
     <div className="flex h-full flex-col">
       {/* Messages */}
