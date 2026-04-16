@@ -81,6 +81,32 @@ export const ChatPanel = ({
       {/* Composer */}
       <div className="border-t border-border bg-background/80 px-4 py-4 backdrop-blur sm:px-8">
         <div className="mx-auto max-w-3xl">
+          {hasMessages && (
+            <div className="mb-3 flex flex-wrap items-center gap-1.5">
+              <span className="mr-1 text-[11px] font-medium uppercase tracking-wider text-muted-foreground">
+                Hint:
+              </span>
+              {([1, 2, 3, 4] as const).map((lvl) => {
+                const labels = ["Tiny nudge", "Approach", "Pseudocode", "Solution"];
+                return (
+                  <button
+                    key={lvl}
+                    onClick={() => requestHint(lvl)}
+                    disabled={isStreaming}
+                    className="inline-flex items-center gap-1.5 rounded-full border bg-card px-2.5 py-1 text-[11px] font-medium transition-all hover:bg-card/70 disabled:cursor-not-allowed disabled:opacity-40"
+                    style={{
+                      borderColor: `hsl(var(--hint-${lvl}) / 0.4)`,
+                      color: `hsl(var(--hint-${lvl}))`,
+                    }}
+                    aria-label={`Request level ${lvl} hint: ${labels[lvl - 1]}`}
+                  >
+                    <span className="font-mono font-bold">L{lvl}</span>
+                    <span className="text-foreground/80">{labels[lvl - 1]}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
           <div className="group relative rounded-xl border border-border bg-card focus-within:border-primary/60 focus-within:shadow-[0_0_0_3px_hsl(var(--primary)/0.12)] transition-all">
             <Textarea
               value={input}
