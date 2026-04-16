@@ -2,95 +2,92 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* DSA Mentor — Dark code-editor design system. All colors HSL. */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Deep editor background */
+    --background: 222 20% 7%;
+    --foreground: 210 25% 92%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 18% 10%;
+    --card-foreground: 210 25% 92%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 22% 9%;
+    --popover-foreground: 210 25% 92%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Electric mentor accent */
+    --primary: 142 76% 55%;
+    --primary-foreground: 222 30% 8%;
+    --primary-glow: 142 90% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 222 16% 14%;
+    --secondary-foreground: 210 25% 92%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 222 14% 13%;
+    --muted-foreground: 215 15% 60%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 199 89% 60%;
+    --accent-foreground: 222 30% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 210 25% 95%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 222 14% 16%;
+    --input: 222 16% 14%;
+    --ring: 142 76% 55%;
 
-    --radius: 0.5rem;
+    /* Semantic syntax / hint level colors */
+    --hint-1: 199 89% 60%;
+    --hint-2: 48 96% 60%;
+    --hint-3: 25 95% 60%;
+    --hint-4: 0 75% 60%;
 
-    --sidebar-background: 0 0% 98%;
+    --code-bg: 222 25% 5%;
+    --code-border: 222 16% 14%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 55%), hsl(170 80% 55%));
+    --gradient-glow: radial-gradient(60% 60% at 50% 0%, hsl(142 76% 55% / 0.18), transparent);
+    --gradient-surface: linear-gradient(180deg, hsl(222 20% 8%), hsl(222 22% 6%));
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(142 76% 55% / 0.25);
+    --shadow-elegant: 0 10px 40px -10px hsl(0 0% 0% / 0.6);
 
-    --sidebar-primary-foreground: 0 0% 98%;
+    --radius: 0.625rem;
 
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 222 22% 6%;
+    --sidebar-foreground: 210 20% 80%;
+    --sidebar-primary: 142 76% 55%;
+    --sidebar-primary-foreground: 222 30% 8%;
+    --sidebar-accent: 222 16% 12%;
+    --sidebar-accent-foreground: 210 25% 92%;
+    --sidebar-border: 222 14% 14%;
+    --sidebar-ring: 142 76% 55%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Same as root — app is dark by default */
+    --background: 222 20% 7%;
+    --foreground: 210 25% 92%;
+    --card: 222 18% 10%;
+    --card-foreground: 210 25% 92%;
+    --popover: 222 22% 9%;
+    --popover-foreground: 210 25% 92%;
+    --primary: 142 76% 55%;
+    --primary-foreground: 222 30% 8%;
+    --secondary: 222 16% 14%;
+    --secondary-foreground: 210 25% 92%;
+    --muted: 222 14% 13%;
+    --muted-foreground: 215 15% 60%;
+    --accent: 199 89% 60%;
+    --accent-foreground: 222 30% 8%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 210 25% 95%;
+    --border: 222 14% 16%;
+    --input: 222 16% 14%;
+    --ring: 142 76% 55%;
   }
 }
 
@@ -99,7 +96,105 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html, body, #root {
+    height: 100%;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    background-image: var(--gradient-glow);
+    background-repeat: no-repeat;
+    background-size: 100% 600px;
   }
+}
+
+@layer components {
+  .font-mono-ui {
+    font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+      Consolas, "Liberation Mono", "Courier New", monospace;
+  }
+
+  /* Markdown rendering inside chat bubbles */
+  .prose-chat {
+    @apply text-sm leading-relaxed text-foreground;
+  }
+  .prose-chat p { @apply my-2; }
+  .prose-chat strong { @apply text-foreground font-semibold; }
+  .prose-chat em { @apply text-muted-foreground; }
+  .prose-chat ul { @apply list-disc pl-5 my-2 space-y-1; }
+  .prose-chat ol { @apply list-decimal pl-5 my-2 space-y-1; }
+  .prose-chat h1, .prose-chat h2, .prose-chat h3 {
+    @apply font-semibold text-foreground mt-4 mb-2;
+  }
+  .prose-chat h1 { @apply text-base; }
+  .prose-chat h2 { @apply text-base; }
+  .prose-chat h3 { @apply text-sm; }
+  .prose-chat code:not(pre code) {
+    @apply font-mono-ui text-[0.8rem] px-1.5 py-0.5 rounded;
+    background: hsl(var(--code-bg));
+    color: hsl(var(--primary-glow));
+    border: 1px solid hsl(var(--code-border));
+  }
+  .prose-chat pre {
+    @apply rounded-lg my-3 p-4 overflow-x-auto text-xs leading-relaxed;
+    background: hsl(var(--code-bg));
+    border: 1px solid hsl(var(--code-border));
+  }
+  .prose-chat pre code {
+    @apply font-mono-ui;
+    color: hsl(210 25% 88%);
+  }
+  .prose-chat blockquote {
+    @apply border-l-2 pl-3 my-2 text-muted-foreground;
+    border-color: hsl(var(--primary) / 0.5);
+  }
+  .prose-chat a {
+    @apply underline underline-offset-2;
+    color: hsl(var(--accent));
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(var(--border) / 0.4) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--border) / 0.4) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border)) transparent;
+  }
+  .scrollbar-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 4px;
+  }
+  .scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+  .animate-pulse-dot {
+    animation: pulse-dot 1.4s infinite ease-in-out;
+  }
+}
+
+@keyframes pulse-dot {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.85); }
+  40% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes blink-caret {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+.caret::after {
+  content: "▍";
+  margin-left: 2px;
+  color: hsl(var(--primary));
+  animation: blink-caret 1s steps(1) infinite;
 }

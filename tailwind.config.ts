@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        mono: ['"JetBrains Mono"', "ui-monospace", "SFMono-Regular", "Menlo", "monospace"],
+        display: ['"Space Grotesk"', "Inter", "system-ui", "sans-serif"],
+        sans: ['Inter', "system-ui", "sans-serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -22,6 +27,17 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
+        },
+        hint: {
+          1: "hsl(var(--hint-1))",
+          2: "hsl(var(--hint-2))",
+          3: "hsl(var(--hint-3))",
+          4: "hsl(var(--hint-4))",
+        },
+        code: {
+          DEFAULT: "hsl(var(--code-bg))",
+          border: "hsl(var(--code-border))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
