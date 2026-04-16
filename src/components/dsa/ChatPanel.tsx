@@ -43,7 +43,7 @@ export const ChatPanel = ({
       1: "Give me a Level 1 hint — just a tiny nudge to point me in the right direction. Don't reveal the approach yet.",
       2: "Give me a Level 2 hint — describe the high-level approach or pattern to use, without pseudocode or code.",
       3: "Give me a Level 3 hint — walk me through the pseudocode / step-by-step logic, but no full code yet.",
-      4: "Give me a Level 4 hint — the full solution with code, complexity analysis, and explanation.",
+      4: "LEVEL 4 — FULL SOLUTION REQUESTED. I am explicitly asking for the complete answer now. Please provide ALL of the following, in this exact order, with clear markdown headings:\n\n1. **Intuition** — short explanation of the core idea.\n2. **Approach** — step-by-step explanation of the algorithm.\n3. **Full Code** — the complete, runnable, well-commented solution in a single fenced code block (use the language I'm working in, default to Java).\n4. **Time Complexity** — Big-O with a one-line justification.\n5. **Space Complexity** — Big-O with a one-line justification.\n6. **Edge Cases** — bullet list of important edge cases handled.\n\nDo NOT withhold the code. Do NOT ask me to try first. This is the explicit Level 4 request.",
     };
     onSend(prompts[level]);
   };
