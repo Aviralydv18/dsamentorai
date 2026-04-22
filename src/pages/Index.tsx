@@ -123,7 +123,7 @@ const Index = () => {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <
+          <a
             href="https://docs.lovable.dev/features/cloud"
             target="_blank"
             rel="noreferrer"
