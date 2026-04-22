@@ -1,5 +1,5 @@
 import { useCallback, useRef, useState } from "react";
-import { Brain, Github, Zap } from "lucide-react";
+import { Brain, Github } from "lucide-react";
 import {
   ResizableHandle,
   ResizablePanel,
@@ -123,10 +123,7 @@ const Index = () => {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <span className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-primary/30 bg-primary/5 px-2.5 py-1 text-[11px] font-medium text-primary">
-            <Zap className="h-3 w-3" /> Powered by Lovable AI
-          </span>
-          <a
+          <
             href="https://docs.lovable.dev/features/cloud"
             target="_blank"
             rel="noreferrer"
